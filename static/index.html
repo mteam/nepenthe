@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nepenthe</title>
+</head>
+<body>
+  <div id="container">
+    <canvas id="game" width="800" height="600">
+      <p class="unsupported">
+        We are sorry, but your browser does not support Nepenthe.
+      </p>
+    </canvas>
+  </div>
+
+  <script src="nepenthe.js"></script>
+  <script>
+    (function() {
+      require('nepenthe');
+
+      var love = require('love'),
+          canvas = love.graphics.newCanvas('#game');
+
+      love.graphics.setScreen(canvas);
+      love.run();
+    })();
+  </script>
+</body>
+</html>
