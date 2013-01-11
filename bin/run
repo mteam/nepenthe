@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+var mallow = require('mallow'),
+    express = require('express');
+
+var base = __dirname + '/../';
+
+var love = mallow.package('love')
+  .directory(base + 'lib/love')
+  .include('lib/**/*.js')
+  .main('lib/index');
+
+var nepenthe = mallow.package('nepenthe')
+  .directory(base + 'src')
+  .include('**/*.js')
+  .main('index');
+
+var app = express();
+
+
+
+app.use(express.logger('dev'));
+app.use(express.static(base + '/static'));
+
+app.get('/nepenthe.js', function(req, res) {
+  res.type('js');
+  
+  mallow.compile(love, nepenthe).then(function(output) {
+    res.end(output);
+  });
+});
+
+var port = process.env.PORT || 3000;
+
+app.listen(port);
+console.log('Run game at http://localhost:' + port);
