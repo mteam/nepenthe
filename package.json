@@ -1,0 +1,8 @@
+{
+  "name": "nepenthe",
+  "private": true,
+  "dependencies": {
+    "express": "~3.0.5",
+    "mallow": "~2.0.0"
+  }
+}
