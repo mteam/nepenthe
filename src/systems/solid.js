@@ -3,7 +3,7 @@ var love = require('love');
 module.exports = love.ecs.system({
 
   update: function() {
-    var cs = this.system('collisions').all();
+    var cs = this.getSystem('collisions').all();
 
     var i, c;
     for (i = 0; i < cs.length; i++) {

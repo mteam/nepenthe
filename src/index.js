@@ -15,7 +15,7 @@ love.load = function() {
 
   // create managers
   game.entities = love.cm.container();
-  game.systems = love.ecs.managers.system(game.entities);
+  game.systems = love.ecs.manager(game.entities);
 
   // add entities
   // game.manager.add(player(20, 20));

@@ -3,7 +3,7 @@ var love = require('love');
 module.exports = love.ecs.system({
 
   initialize: function() {
-    this.entities = this.entities('gravity', 'velocity');
+    this.entities = this.find('gravity', 'velocity');
   },
 
   update: function(dt) {

@@ -3,7 +3,7 @@ var love = require('love');
 module.exports = love.ecs.system({
 
   initialize: function() {
-    this.entities = this.entities('animation', 'position');
+    this.entities = this.find('animation', 'position');
   },
 
   draw: function() {

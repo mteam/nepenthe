@@ -5,7 +5,7 @@ module.exports = love.ecs.system({
   initialize: function() {
     love.events.extend(this);
 
-    this.entities = this.entities('position', 'body');
+    this.entities = this.find('position', 'body');
     this.hash = love.collisions.hash(50);
   },
 

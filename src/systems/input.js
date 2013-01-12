@@ -6,7 +6,7 @@ module.exports = love.ecs.system({
     love.keyboard.on('pressed', this.pressed);
     love.keyboard.on('released', this.released);
 
-    this.entity = this.entities('input', 'walking').single();
+    this.entity = this.find('input', 'walking').single();
   },
 
   pressed: function(key) {
