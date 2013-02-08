@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Nepenthe</title>
+  </head>
+  <body>
+    <div id="game"></div>
+
+    <script src="build/build.js"></script>
+    <script>
+      var Game = require('nepenthe'),
+          nepenthe = new Game;
+
+      nepenthe.init(document.getElementById('game'));
+      nepenthe.start();
+    </script>
+  </body>
+</html>

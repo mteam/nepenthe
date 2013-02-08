@@ -1,0 +1,8 @@
+{
+  "name": "nepenthe",
+  "repo": "mteam/nepenthe",
+  "version": "0.0.0",
+  "scripts": [
+    "index.js"
+  ]
+}
