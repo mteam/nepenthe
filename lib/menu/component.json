@@ -1,0 +1,14 @@
+{
+  "name": "menu",
+  "version": "0.1.0",
+  "dependencies": {
+    "mteam/stages": "*"
+  },
+  "scripts": [
+    "index.js",
+    "markup.js"
+  ],
+  "styles": [
+    "style.css"
+  ]
+}
