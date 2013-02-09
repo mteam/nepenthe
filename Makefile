@@ -1,8 +1,5 @@
 build: components
-	@component build
-
-build-dev: components
-	@component build --dev
+	@component build $(OPTS)
 
 components: component.json
 	@component install
@@ -10,4 +7,4 @@ components: component.json
 clean:
 	rm -fr components
 
-.PHONY: build build-dev clean
+.PHONY: clean
