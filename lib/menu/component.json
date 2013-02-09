@@ -2,7 +2,9 @@
   "name": "menu",
   "version": "0.1.0",
   "dependencies": {
-    "mteam/stages": "*"
+    "mteam/stages": "*",
+    "component/event": "*",
+    "component/bind": "*"
   },
   "scripts": [
     "index.js",
