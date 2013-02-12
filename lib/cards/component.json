@@ -1,0 +1,16 @@
+{
+  "name": "cards",
+  "dependencies": {
+    "mteam/stages": "*",
+    "discore/closest": "*",
+    "component/event": "*",
+    "component/bind": "*"
+  },
+  "scripts": [
+    "index.js",
+    "markup.js"
+  ],
+  "styles": [
+    "style.css"
+  ]
+}

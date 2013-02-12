@@ -1,0 +1,82 @@
+.album {
+  position: relative;
+
+  margin: 0 auto;
+
+  width: 960px;
+  height: 600px;
+
+  background: url(album.png);
+}
+
+.card {
+  position: absolute;
+
+  width: 320px;
+  height: 280px;
+
+  -webkit-transition: 1s ease-in-out;
+  -webkit-perspective: 600px;
+}
+
+.card.lvl1, .card.lvl2, .card.lvl3 { top: 36px; }
+.card.lvl4, .card.lvl5 { top: 316px; }
+
+.card.lvl1, .card.lvl4 { left: 0px; }
+.card.lvl2, .card.lvl5 { left: 320px; }
+.card.lvl3 { left: 640px; }
+
+.card .front, .card .back {
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+
+  -webkit-transition: 1s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+.card .front {
+  z-index: 200;
+}
+
+.card .back {
+  z-index: 100;
+  -webkit-transform: rotateY(180deg);
+}
+
+.card.lvl1 .front { background-image: url(lvl1_front.png); }
+.card.lvl2 .front { background-image: url(lvl2_front.png); }
+.card.lvl3 .front { background-image: url(lvl3_front.png); }
+.card.lvl4 .front { background-image: url(lvl4_front.png); }
+.card.lvl5 .front { background-image: url(lvl5_front.png); }
+
+.card.lvl1 .back { background-image: url(lvl1_back.png); }
+.card.lvl2 .back { background-image: url(lvl2_back.png); }
+.card.lvl3 .back { background-image: url(lvl3_back.png); }
+.card.lvl4 .back { background-image: url(lvl4_back.png); }
+.card.lvl5 .back { background-image: url(lvl5_back.png); }
+
+.card.active {
+  z-index: 500;
+
+  width: 650px;
+  height: 570px;
+
+  left: 155px;
+  top: 15px;
+}
+
+.card.active .front {
+  -webkit-transform: rotateY(-180deg);
+}
+
+.card.active .back {
+  z-index: 300;
+  -webkit-transform: rotateY(0deg);
+}
