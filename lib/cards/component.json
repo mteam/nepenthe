@@ -12,5 +12,18 @@
   ],
   "styles": [
     "style.css"
+  ],
+  "images": [
+    "images/album.png",
+    "images/lvl1_front.png",
+    "images/lvl2_front.png",
+    "images/lvl3_front.png",
+    "images/lvl4_front.png",
+    "images/lvl5_front.png",
+    "images/lvl1_back.png",
+    "images/lvl2_back.png",
+    "images/lvl3_back.png",
+    "images/lvl4_back.png",
+    "images/lvl5_back.png"
   ]
 }

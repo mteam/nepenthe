@@ -13,5 +13,9 @@
   ],
   "styles": [
     "style.css"
-  ]
+  ],
+  "images": [
+    "images/background.png",
+    "images/buttons.png"
+  ] 
 }

@@ -6,7 +6,7 @@
   width: 960px;
   height: 600px;
 
-  background: url(album.png);
+  background: url(images/album.png);
 }
 
 .card {
@@ -50,17 +50,17 @@
   -webkit-transform: rotateY(180deg);
 }
 
-.card.lvl1 .front { background-image: url(lvl1_front.png); }
-.card.lvl2 .front { background-image: url(lvl2_front.png); }
-.card.lvl3 .front { background-image: url(lvl3_front.png); }
-.card.lvl4 .front { background-image: url(lvl4_front.png); }
-.card.lvl5 .front { background-image: url(lvl5_front.png); }
+.card.lvl1 .front { background-image: url(images/lvl1_front.png); }
+.card.lvl2 .front { background-image: url(images/lvl2_front.png); }
+.card.lvl3 .front { background-image: url(images/lvl3_front.png); }
+.card.lvl4 .front { background-image: url(images/lvl4_front.png); }
+.card.lvl5 .front { background-image: url(images/lvl5_front.png); }
 
-.card.lvl1 .back { background-image: url(lvl1_back.png); }
-.card.lvl2 .back { background-image: url(lvl2_back.png); }
-.card.lvl3 .back { background-image: url(lvl3_back.png); }
-.card.lvl4 .back { background-image: url(lvl4_back.png); }
-.card.lvl5 .back { background-image: url(lvl5_back.png); }
+.card.lvl1 .back { background-image: url(images/lvl1_back.png); }
+.card.lvl2 .back { background-image: url(images/lvl2_back.png); }
+.card.lvl3 .back { background-image: url(images/lvl3_back.png); }
+.card.lvl4 .back { background-image: url(images/lvl4_back.png); }
+.card.lvl5 .back { background-image: url(images/lvl5_back.png); }
 
 .card.active {
   z-index: 500;

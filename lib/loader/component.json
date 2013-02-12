@@ -10,5 +10,10 @@
   ],
   "styles": [
     "style.css"
+  ],
+  "images": [
+    "images/background.png",
+    "images/fluid.png",
+    "images/progressbar.png"
   ]
 }
