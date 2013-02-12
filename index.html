@@ -12,10 +12,10 @@
 
     <script src="build/build.js"></script>
     <script>
-      var Game = require('nepenthe'),
-          nepenthe = new Game;
+      var Nepenthe = require('nepenthe'),
+          container = document.getElementById('game'),
+          nepenthe = new Nepenthe(container);
 
-      nepenthe.init(document.getElementById('game'));
       nepenthe.start();
     </script>
   </body>

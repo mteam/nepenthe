@@ -2,27 +2,24 @@ var Container = require('stages').Container,
     Menu = require('menu'),
     Cards = require('cards');
 
-function Game() {
-  this.container = null;
+function Nepenthe(element) {
+  this.container = new Container(element);
+
+  this.stages = {
+    menu: new Menu,
+    cards: new Cards
+  };
 }
 
-module.exports = Game;
+Nepenthe.prototype.start = function() {
+  var container = this.container,
+      stages = this.stages;
 
-Game.prototype.init = function(element) {
-  this.container = new Container(element);
-};
-
-Game.prototype.start = function() {
-  console.log('game started');
-
-  var menu = new Menu,
-      cards = new Cards;
-
-  var container = this.container;
-
-  menu.on('cards', function() {
-    container.use(cards);
+  stages.menu.on('cards', function() {
+    container.use(stages.cards);
   });
 
-  container.use(menu);
+  container.use(stages.menu);
 };
+
+module.exports = Nepenthe;
