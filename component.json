@@ -3,7 +3,7 @@
   "repo": "mteam/nepenthe",
   "version": "0.0.0",
   "paths": ["lib"],
-  "local": ["menu"],
+  "local": ["menu", "loader"],
   "dependencies": {
     "mteam/stages": "*"
   },
