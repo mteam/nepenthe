@@ -1,7 +1,8 @@
 {
   "name": "loader",
   "dependencies": {
-    "mteam/stages": "*"
+    "mteam/stages": "*",
+    "mteam/helpers": "*"
   },
   "scripts": [
     "index.js",
