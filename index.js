@@ -1,25 +1,51 @@
 var Container = require('stages').Container,
+    Assets = require('assets'),
+    Loader = require('loader'),
     Menu = require('menu'),
     Cards = require('cards');
 
 function Nepenthe(element) {
   this.container = new Container(element);
+  this.assets = new Assets;
 
   this.stages = {
+    loader: new Loader,
     menu: new Menu,
     cards: new Cards
   };
 }
 
 Nepenthe.prototype.start = function() {
-  var container = this.container,
-      stages = this.stages;
+  var stages = this.stages,
+      self = this;
 
   stages.menu.on('cards', function() {
-    container.use(stages.cards);
+    self.open(stages.cards);
   });
 
-  container.use(stages.menu);
+  this.open(stages.menu);
+};
+
+Nepenthe.prototype.open = function(stage) {
+  var container = this.container,
+      loader = this.stages.loader,
+      assets = this.assets;
+
+  loader.update(0);
+  container.use(loader);
+  
+  stage.load(assets);
+
+  var batch = assets.load();
+
+  batch.on('progress', function(e) {
+    loader.update(e.percent);
+  });
+
+  batch.end(function() {
+    assets.reset();
+    container.use(stage);
+  });
 };
 
 module.exports = Nepenthe;

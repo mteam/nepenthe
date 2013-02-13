@@ -5,7 +5,8 @@
   "paths": ["lib"],
   "local": ["menu", "loader", "cards"],
   "dependencies": {
-    "mteam/stages": "*"
+    "mteam/stages": "*",
+    "mteam/assets": "*"
   },
   "scripts": [
     "index.js"
