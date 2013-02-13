@@ -3,7 +3,7 @@ body {
   background: #000;
 }
 
-#game {
+#container {
   width: 960px;
   height: 600px;
   margin: 0 auto;

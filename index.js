@@ -2,6 +2,7 @@ var Container = require('stages').Container,
     Assets = require('assets'),
     Loader = require('loader'),
     Menu = require('menu'),
+    Game = require('game'),
     Cards = require('cards');
 
 function Nepenthe(element) {
@@ -11,6 +12,7 @@ function Nepenthe(element) {
   this.stages = {
     loader: new Loader,
     menu: new Menu,
+    game: new Game,
     cards: new Cards
   };
 }
@@ -18,6 +20,10 @@ function Nepenthe(element) {
 Nepenthe.prototype.start = function() {
   var stages = this.stages,
       self = this;
+
+  stages.menu.on('start', function() {
+    self.open(stages.game);
+  });
 
   stages.menu.on('cards', function() {
     self.open(stages.cards);

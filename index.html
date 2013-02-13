@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   </head>
   <body>
-    <div id="game"></div>
+    <div id="container"></div>
 
     <script src="build/build.js"></script>
     <script>
       var Nepenthe = require('nepenthe'),
-          container = document.getElementById('game'),
+          container = document.getElementById('container'),
           nepenthe = new Nepenthe(container);
 
       nepenthe.start();

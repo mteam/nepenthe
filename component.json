@@ -8,6 +8,7 @@
   "local": [
     "menu",
     "loader",
+    "game",
     "cards"
   ],
   "dependencies": {
