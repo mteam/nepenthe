@@ -16,7 +16,9 @@
   height: 280px;
 
   -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
   -webkit-perspective: 600px;
+  -moz-perspective: 600px;
 }
 
 .card.lvl1, .card.lvl2, .card.lvl3 { top: 36px; }
@@ -38,7 +40,9 @@
   background-size: cover;
 
   -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 }
 
 .card .front {
@@ -48,6 +52,7 @@
 .card .back {
   z-index: 100;
   -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
 }
 
 .card.lvl1 .front { background-image: url(images/lvl1_front.png); }
@@ -74,9 +79,11 @@
 
 .card.active .front {
   -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
 }
 
 .card.active .back {
   z-index: 300;
   -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
 }
