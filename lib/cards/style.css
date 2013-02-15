@@ -1,89 +1,157 @@
 .album {
   position: relative;
-
   margin: 0 auto;
-
   width: 960px;
   height: 600px;
-
-  background: url(images/album.png);
+  background: url("images/album.png");
 }
-
 .card {
   position: absolute;
-
   width: 320px;
   height: 280px;
-
   -webkit-transition: 1s ease-in-out;
   -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  perspective: 600px;
 }
-
-.card.lvl1, .card.lvl2, .card.lvl3 { top: 36px; }
-.card.lvl4, .card.lvl5 { top: 316px; }
-
-.card.lvl1, .card.lvl4 { left: 0px; }
-.card.lvl2, .card.lvl5 { left: 320px; }
-.card.lvl3 { left: 640px; }
-
-.card .front, .card .back {
+.card .front,
+.card .back {
   position: absolute;
-
-  top: 0px;
-  left: 0px;
-
+  0: 0px;
+  ((null)): 0;
   width: 100%;
   height: 100%;
-
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
-
   -webkit-transition: 1s ease-in-out;
   -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
-
 .card .front {
   z-index: 200;
 }
-
 .card .back {
   z-index: 100;
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
-
-.card.lvl1 .front { background-image: url(images/lvl1_front.png); }
-.card.lvl2 .front { background-image: url(images/lvl2_front.png); }
-.card.lvl3 .front { background-image: url(images/lvl3_front.png); }
-.card.lvl4 .front { background-image: url(images/lvl4_front.png); }
-.card.lvl5 .front { background-image: url(images/lvl5_front.png); }
-
-.card.lvl1 .back { background-image: url(images/lvl1_back.png); }
-.card.lvl2 .back { background-image: url(images/lvl2_back.png); }
-.card.lvl3 .back { background-image: url(images/lvl3_back.png); }
-.card.lvl4 .back { background-image: url(images/lvl4_back.png); }
-.card.lvl5 .back { background-image: url(images/lvl5_back.png); }
-
 .card.active {
   z-index: 500;
-
   width: 650px;
   height: 570px;
-
-  left: 155px;
-  top: 15px;
 }
-
 .card.active .front {
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
-
 .card.active .back {
   z-index: 300;
   -webkit-transform: rotateY(0deg);
   -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.card.lvl1 {
+  left: 0px;
+  top: 36px;
+}
+.card.lvl1.active {
+  -webkit-transform: translate(155px, -21px);
+  -moz-transform: translate(155px, -21px);
+  -o-transform: translate(155px, -21px);
+  -ms-transform: translate(155px, -21px);
+  transform: translate(155px, -21px);
+}
+.card.lvl1 .front {
+  background-image: url("images/lvl1_front.png");
+}
+.card.lvl1 .back {
+  background-image: url("images/lvl1_back.png");
+}
+.card.lvl2 {
+  left: 320px;
+  top: 36px;
+}
+.card.lvl2.active {
+  -webkit-transform: translate(-165px, -21px);
+  -moz-transform: translate(-165px, -21px);
+  -o-transform: translate(-165px, -21px);
+  -ms-transform: translate(-165px, -21px);
+  transform: translate(-165px, -21px);
+}
+.card.lvl2 .front {
+  background-image: url("images/lvl2_front.png");
+}
+.card.lvl2 .back {
+  background-image: url("images/lvl2_back.png");
+}
+.card.lvl3 {
+  left: 640px;
+  top: 36px;
+}
+.card.lvl3.active {
+  -webkit-transform: translate(-485px, -21px);
+  -moz-transform: translate(-485px, -21px);
+  -o-transform: translate(-485px, -21px);
+  -ms-transform: translate(-485px, -21px);
+  transform: translate(-485px, -21px);
+}
+.card.lvl3 .front {
+  background-image: url("images/lvl3_front.png");
+}
+.card.lvl3 .back {
+  background-image: url("images/lvl3_back.png");
+}
+.card.lvl4 {
+  left: 0px;
+  top: 316px;
+}
+.card.lvl4.active {
+  -webkit-transform: translate(155px, -301px);
+  -moz-transform: translate(155px, -301px);
+  -o-transform: translate(155px, -301px);
+  -ms-transform: translate(155px, -301px);
+  transform: translate(155px, -301px);
+}
+.card.lvl4 .front {
+  background-image: url("images/lvl4_front.png");
+}
+.card.lvl4 .back {
+  background-image: url("images/lvl4_back.png");
+}
+.card.lvl5 {
+  left: 320px;
+  top: 316px;
+}
+.card.lvl5.active {
+  -webkit-transform: translate(-165px, -301px);
+  -moz-transform: translate(-165px, -301px);
+  -o-transform: translate(-165px, -301px);
+  -ms-transform: translate(-165px, -301px);
+  transform: translate(-165px, -301px);
+}
+.card.lvl5 .front {
+  background-image: url("images/lvl5_front.png");
+}
+.card.lvl5 .back {
+  background-image: url("images/lvl5_back.png");
 }
