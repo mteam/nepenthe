@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   background: #000;
@@ -6,7 +10,12 @@ body {
 #container {
   width: 960px;
   height: 600px;
-  margin: 0 auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -300px 0 0 -480px;
+
   overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
