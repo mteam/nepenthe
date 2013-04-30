@@ -5,7 +5,6 @@
     "mteam/canvas": "*",
     "mteam/renderer": "*",
     "mteam/timer": "*",
-    "mteam/component-model": "*",
     "mteam/ecs": "*",
     "component/bind": "*"
   },
