@@ -1,5 +1,5 @@
 {
-  "name": "game",
+  "name": "game-stage",
   "dependencies": {
     "mteam/stages": "*",
     "mteam/canvas": "*",

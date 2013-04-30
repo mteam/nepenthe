@@ -6,10 +6,10 @@
     "lib"
   ],
   "local": [
-    "menu",
-    "loader",
-    "game",
-    "cards"
+    "menu-stage",
+    "loader-stage",
+    "game-stage",
+    "cards-stage"
   ],
   "dependencies": {
     "mteam/stages": "*",

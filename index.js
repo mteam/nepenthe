@@ -1,9 +1,9 @@
 var Container = require('stages').Container,
     AssetsLoader = require('assets'),
-    LoaderStage = require('loader'),
-    MenuStage = require('menu'),
-    GameStage = require('game'),
-    CardsStage = require('cards');
+    LoaderStage = require('loader-stage'),
+    MenuStage = require('menu-stage'),
+    GameStage = require('game-stage'),
+    CardsStage = require('cards-stage');
 
 function Nepenthe(element) {
   this.container = new Container(element);

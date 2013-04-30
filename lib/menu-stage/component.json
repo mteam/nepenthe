@@ -1,5 +1,5 @@
 {
-  "name": "menu",
+  "name": "menu-stage",
   "version": "0.1.0",
   "dependencies": {
     "mteam/stages": "*",

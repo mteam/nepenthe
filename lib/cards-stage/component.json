@@ -1,5 +1,5 @@
 {
-  "name": "cards",
+  "name": "cards-stage",
   "dependencies": {
     "mteam/stages": "*",
     "discore/closest": "*",
