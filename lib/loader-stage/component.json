@@ -12,7 +12,8 @@
     "style.css"
   ],
   "images": [
-    "images/background.png",
+    "images/back.png",
+    "images/front.png",
     "images/fluid.png",
     "images/progressbar.png"
   ]

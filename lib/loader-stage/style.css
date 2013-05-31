@@ -4,14 +4,31 @@
   width: 100%;
   height: 100%;
 
-  background: url(images/background.png) no-repeat;
+  background-image: url(images/back.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#loader .container {
+  position: absolute;
+
+  width: 494px;
+  height: 204px;
+
+  top: 50%;
+  left: 50%;
+  margin-left: -247px;
+  margin-top: -102px;
+
+  background: url(images/front.png) no-repeat;
 }
 
 #loader .progressbar {
   position: absolute;
 
-  left: 234px;
-  top: 450px;
+  left: 2px;
+  top: 180px;
 
   width: 490px;
   height: 22px;
@@ -26,8 +43,8 @@
 #loader .fluid {
   position: absolute;
 
-  left: 438px;
-  top: 274px;
+  left: 206px;
+  top: 4px;
 
   width: 50px;
   height: 62px;
