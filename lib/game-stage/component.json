@@ -9,8 +9,14 @@
     "component/raf": "*",
     "component/bind": "*"
   },
+  "local": [
+    "position",
+    "movement",
+    "player"
+  ],
   "scripts": [
     "index.js",
-    "markup.js"
+    "markup.js",
+    "systems.js"
   ]
 }

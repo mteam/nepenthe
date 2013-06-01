@@ -1,0 +1,9 @@
+{
+  "name": "movement",
+  "dependencies": {
+    "mteam/vector": "*"
+  },
+  "scripts": [
+    "index.js"
+  ]
+}
