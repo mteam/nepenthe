@@ -6,6 +6,7 @@
     "mteam/renderer": "*",
     "mteam/timer": "*",
     "mteam/ecs": "*",
+    "component/raf": "*",
     "component/bind": "*"
   },
   "scripts": [
