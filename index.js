@@ -5,7 +5,7 @@ var Container = require('stages').Container,
     GameStage = require('game-stage'),
     CardsStage = require('cards-stage');
 
-function Nepenthe(element) {
+function Game(element) {
   this.container = new Container(element);
   this.assets = new AssetsLoader;
 
@@ -17,38 +17,46 @@ function Nepenthe(element) {
   };
 }
 
-Nepenthe.prototype.start = function() {
-  var stages = this.stages,
-      this_ = this;
+Game.prototype = {
 
-  stages.menu.on('start', function() {
-    this_.open(stages.game);
-  });
+  start: function() {
+    var stages = this.stages;
+    var self = this;
 
-  stages.menu.on('cards', function() {
-    this_.open(stages.cards);
-  });
+    stages.menu.on('start', function() {
+      self.switch(stages.game);
+    });
 
-  this.open(stages.menu);
+    stages.menu.on('cards', function() {
+      self.switch(stages.cards);
+    });
+
+    this.switch(stages.menu);
+  },
+
+  switch: function(stage) {
+    var stages = this.stages;
+    var container = this.container;
+    var assets = this.assets;
+
+    stages.loader.reset();
+    container.use(stages.loader);
+
+    stage.load(assets);
+    var batch = assets.load();
+
+    batch.on('progress', function(e) {
+      stages.loader.update(e.percent);
+    });
+
+    batch.end(function() {
+      assets.reset();
+      container.use(stage);
+
+      if (stage.enter) stage.enter();
+    });
+  }
+
 };
 
-Nepenthe.prototype.open = function(stage) {
-  this.stages.loader.reset();
-  this.container.use(this.stages.loader);
-  
-  stage.load(this.assets);
-
-  var batch = this.assets.load(),
-      this_ = this;
-
-  batch.on('progress', function(e) {
-    this_.stages.loader.update(e.percent);
-  });
-
-  batch.end(function() {
-    this_.assets.reset();
-    this_.container.use(stage);
-  });
-};
-
-module.exports = Nepenthe;
+module.exports = Game;
