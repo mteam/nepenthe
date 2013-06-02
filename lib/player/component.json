@@ -1,10 +1,18 @@
 {
   "name": "player",
+  "dependencies": {
+    "mteam/animation": "*",
+    "mteam/image": "*"
+  },
   "local": [
     "position",
-    "movement"
+    "movement",
+    "animation-system"
   ],
   "scripts": [
     "index.js"
+  ],
+  "images": [
+    "player.png"
   ]
 }

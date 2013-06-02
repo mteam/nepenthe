@@ -12,7 +12,8 @@
   "local": [
     "position",
     "movement",
-    "player"
+    "player",
+    "animation-system"
   ],
   "scripts": [
     "index.js",
