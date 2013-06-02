@@ -19,5 +19,8 @@
     "index.js",
     "markup.js",
     "systems.js"
+  ],
+  "styles": [
+    "style.css"
   ]
 }
