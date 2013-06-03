@@ -8,7 +8,7 @@
   "local": [
     "menu-stage",
     "loader-stage",
-    "game-stage",
+    "level-stage",
     "cards-stage"
   ],
   "dependencies": {

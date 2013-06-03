@@ -2,7 +2,7 @@ var Container = require('stages').Container,
     AssetsLoader = require('assets'),
     LoaderStage = require('loader-stage'),
     MenuStage = require('menu-stage'),
-    GameStage = require('game-stage'),
+    LevelStage = require('level-stage'),
     CardsStage = require('cards-stage');
 
 function Game(element) {
@@ -12,7 +12,7 @@ function Game(element) {
   this.stages = {
     loader: new LoaderStage,
     menu: new MenuStage,
-    game: new GameStage,
+    game: new LevelStage,
     cards: new CardsStage
   };
 }
