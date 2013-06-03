@@ -1,0 +1,10 @@
+{
+  "name": "animation-system",
+  "dependencies": {
+    "mteam/ecs": "*",
+    "mteam/animation": "*"
+  },
+  "scripts": [
+    "index.js"
+  ]
+}
