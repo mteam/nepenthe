@@ -2,7 +2,7 @@
   "name": "player",
   "dependencies": {
     "mteam/animation": "*",
-    "mteam/image": "*"
+    "mteam/spritesheet": "*"
   },
   "local": [
     "position",
