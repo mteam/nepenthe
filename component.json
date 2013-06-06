@@ -13,7 +13,8 @@
   ],
   "dependencies": {
     "mteam/stages": "*",
-    "mteam/assets": "*"
+    "mteam/assets": "*",
+    "mteam/tiled-map": "*"
   },
   "scripts": [
     "index.js"

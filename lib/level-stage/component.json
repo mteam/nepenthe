@@ -12,7 +12,8 @@
     "position",
     "movement",
     "player",
-    "animation-system"
+    "animation-system",
+    "map-system"
   ],
   "scripts": [
     "index.js",

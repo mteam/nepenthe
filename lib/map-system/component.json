@@ -1,0 +1,14 @@
+{
+  "name": "map-system",
+  "dependencies": {
+    "mteam/tiled-map": "*"
+  },
+  "scripts": [
+    "index.js",
+    "maps/level_1.json.js"
+  ],
+  "images": [
+    "images/tileset.png",
+    "images/objects.png"
+  ]
+}
