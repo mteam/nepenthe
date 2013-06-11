@@ -37,22 +37,23 @@ Game.prototype = {
   switch: function(stage) {
     var stages = this.stages;
     var container = this.container;
-    var assets = this.assets;
 
+    // show loader
     stages.loader.reset();
     container.use(stages.loader);
 
-    stage.load(assets);
-    var batch = assets.load();
+    // add assets
+    stage.load(this.assets);
+    var batch = this.assets.load();
 
+    // display progess
     batch.on('progress', function(e) {
       stages.loader.update(e.percent);
     });
 
+    // load assets
     batch.end(function() {
-      assets.reset();
       container.use(stage);
-
       if (stage.enter) stage.enter();
     });
   }
