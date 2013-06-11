@@ -15,8 +15,9 @@
     "style.css"
   ],
   "images": [
-    "images/back.png",
+    "images/background.png",
     "images/front.png",
+    "images/header.png",
     "images/buttons.png"
   ] 
 }
