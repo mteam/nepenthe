@@ -7,7 +7,8 @@
   "local": [
     "position",
     "movement",
-    "animation-system"
+    "animation-system",
+    "drawable-system"
   ],
   "scripts": [
     "index.js"
