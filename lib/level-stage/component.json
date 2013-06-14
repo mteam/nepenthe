@@ -13,7 +13,8 @@
     "movement",
     "player",
     "animation-system",
-    "map-system"
+    "map-system",
+    "drawable-system"
   ],
   "scripts": [
     "index.js",

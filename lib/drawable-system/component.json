@@ -1,0 +1,9 @@
+{
+  "name": "drawable-system",
+  "dependencies": {
+    "mteam/container-sorter": "*"
+  },
+  "scripts": [
+    "index.js"
+  ]
+}

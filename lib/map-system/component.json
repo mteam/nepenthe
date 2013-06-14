@@ -3,6 +3,10 @@
   "dependencies": {
     "mteam/tiled-map": "*"
   },
+  "local": [
+    "position",
+    "drawable-system"
+  ],
   "scripts": [
     "index.js",
     "maps/level_1.json.js"
